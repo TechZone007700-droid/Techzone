@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>TechZone | Online Computer Test</title>
-<script>/* Set this to your deployed Worker URL + /api. */ window.TZ_API_BASE_URL = window.TZ_API_BASE_URL || "https://techzone-api.YOUR_SUBDOMAIN.workers.dev/api";</script>
+<script>/* Set this to your deployed Worker URL + /api. */ window.TZ_API_BASE_URL = window.TZ_API_BASE_URL || "https://exam-api.tzweb.workers.dev/api";</script>
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -2350,7 +2350,7 @@ async function tzDownloadUpdatedHTML(){
 
     const data = tzSnapshot();
     let source = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
-    source = source.replace('window.TZ_API_BASE_URL = window.TZ_API_BASE_URL || "https://techzone-api.YOUR_SUBDOMAIN.workers.dev/api";',
+    source = source.replace('window.TZ_API_BASE_URL = window.TZ_API_BASE_URL || "https://exam-api.tzweb.workers.dev/api";',
       'window.TZ_API_BASE_URL = '+JSON.stringify(TZ_API_BASE)+';');
     const marker = 'const TZ_EMBEDDED_DATA = null;\nconst TZ_DATA_MARKER = "__TZ_EMBEDDED_DATA_MARKER__";';
 
